@@ -1,0 +1,29 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.drem.osgi</groupId>
+        <artifactId>spell.parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <packaging>bundle</packaging>
+    <artifactId>spell.services</artifactId>
+    <name>spell.services</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            com.drem.osgi.spell.services
+                        </Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
