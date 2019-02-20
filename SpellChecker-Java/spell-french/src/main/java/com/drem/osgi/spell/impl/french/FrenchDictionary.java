@@ -1,6 +1,5 @@
 package com.drem.osgi.spell.impl.french;
 
-
 import com.drem.osgi.spell.services.DictionaryService;
 import org.apache.felix.ipojo.annotations.Component;
 import org.apache.felix.ipojo.annotations.Instantiate;
