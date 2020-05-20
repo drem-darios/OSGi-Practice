@@ -1,21 +1,25 @@
 # iPOPO decorators
 from pelix.ipopo.decorators import ComponentFactory, Provides, Instantiate
 
-
 # Manipulates the class and sets its (unique) factory name
-@ComponentFactory("hello-service-factory")
+@ComponentFactory("hello-provider-factory")
 # Indicate that the components will provide a service
-@Provides("com.drem.osgi.services.hello")
+@Provides("hello_service")
 # Tell iPOPO to instantiate a component instance as soon as the file is loaded
-@Instantiate("hello-service-auto")
+@Instantiate("hello-provider-auto")
 # A component class must always inherit from object (new-style class)
-class HelloService(object):
+class HelloProvider(object):
     """
     A sample service provider
     """
-
-    def hello(self, name="world"):
+    def hello(self, name="monde"):
         """
         Says hello
         """
-        print "Hello " + name + "!"
+        print("Bonjour,", name, "!")
+
+    def bye(self, name="monde cruel"):
+        """
+        Says bye
+        """
+        print("Au revoir,", name, "!")
